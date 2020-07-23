@@ -3,17 +3,17 @@
 * _None_
 
 ### Project Objective
-Create a Rocks, Papers, Scissors game versus the computer
+Create a Rocks, Papers, Scissors Game
 
 ### URL's
-1. Git - 
-2. Web - 
+1. Git - https://github.com/clarenceyg/Playground-rpsGame
+2. Web - https://clarenceyg.github.io/Playground-rpsGame/index.html
 
 ### HTML Used
-1. 
+1. buttons
 
 ### CSS Used
-1. Flexbox
+1. 
 
 ### JavaScript Used
 1. Math.random
@@ -21,7 +21,7 @@ Create a Rocks, Papers, Scissors game versus the computer
 3. Functions
 4. Alerts
 5. Arrays
-6. Loops
+6. Switch
 
 ### Pseudocode
 1. identify rules
