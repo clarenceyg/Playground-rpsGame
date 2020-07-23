@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Rocks Papers Scissors</title>
+  </head>
+  <body>
+    <h1>Game: Rocks, Papers, Scissors</h1>
+    <p>Hi, welcome to my game.</p> 
+    <p>Rule: "Rocks breaks Scissors, Scissors cuts Paper, Paper covers Rock"</p>
+    <p>Please make your selection:</p>
+    <form id="myForm " action="/action_page.php">
+        <input type="button" onclick="userInput('rock')" value="Rock">
+        <input type="button" onclick="userInput('paper')" value="Paper">
+        <input type="button" onclick="userInput('scissors')" value="Scissors">
+    </form>
+    
+    <script type="text/javascript">
+      //assign values
+      var computerArray = ['rock', 'paper', 'scissors'];      
+      var randomNumber;
+      var computerInput;
+
+      function userInput(rps){
+         playerInput = rps;
+         
+         //Generate random whole number between 0 and 2
+         //Formula to use: Math.floor(Math.random() * (myMax - myMin +1)) + myMin
+         randomNumber = Math.floor(Math.random()*(2-0+1)+1);
+      
+         //get string from array
+         computerInput = computerArray[randomNumber];
+         
+         //create switch to compare user and computer inputs
+         // display result
+         switch (playerInput) {
+            case 'rock':
+               if (computerInput === 'rock'){
+                  alert("Computer selected " + computerInput + ". It's a Tie!");
+                  return;
+               }
+               else if (computerInput === 'scissors'){
+                  alert("Computer selected " + computerInput + ". You Win!");
+                  return;
+               }
+               else if (computerInput === 'paper'){
+                  alert("Computer selected " + computerInput + ". You Lose!");
+                  return;
+               }
+            case 'scissors':
+               if (computerInput === 'scissors'){
+                  alert("Computer selected " + computerInput + ". It's a Tie!");
+               }
+               else if (computerInput === 'paper'){
+                  alert("Computer selected " + computerInput + ". You Win!");
+                  return;
+               }
+               else if (computerInput === 'rock'){
+                  alert("Computer selected " + computerInput + ". You Lose!");
+               }
+            case 'paper':
+               if (computerInput === 'paper'){
+                  alert("Computer selected " + computerInput + ". It's a Tie!");
+                  return;
+               }
+               else if (computerInput === 'rock'){
+                  alert("Computer selected " + computerInput + ". You Win!");
+                  return;
+               }
+               else if (computerInput === 'scissors'){
+                  alert("Computer selected " + computerInput + ". You Lose!");
+                  return;
+               }           
+         }
+      }
+    </script>
+   </body>
+</html>
