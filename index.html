@@ -26,7 +26,12 @@
          
          //Generate random whole number between 0 and 2
          //Formula to use: Math.floor(Math.random() * (myMax - myMin +1)) + myMin
-         randomNumber = Math.floor(Math.random()*(2-0+1)+1);
+
+         //Comment By Abhijeet
+         //The glictch was in Math.floor(Math.random()*(2-0+1)+1);
+         //the extra +1 at the end sometimes gave a value 3 and computerArray[3] is undefined so sometimes the alerts did not show
+         //removing the extra +1 resolved the issue :)
+         randomNumber = Math.floor(Math.random()*(2-0+1)); 
       
          //get string from array
          computerInput = computerArray[randomNumber];
@@ -50,6 +55,8 @@
             case 'scissors':
                if (computerInput === 'scissors'){
                   alert("Computer selected " + computerInput + ". It's a Tie!");
+                  //comment by Abhijeet - also a return statement was missing here so added
+                  return;
                }
                else if (computerInput === 'paper'){
                   alert("Computer selected " + computerInput + ". You Win!");
@@ -57,6 +64,8 @@
                }
                else if (computerInput === 'rock'){
                   alert("Computer selected " + computerInput + ". You Lose!");
+                  //comment by Abhijeet - also a return statement was missing here so added
+                  return;
                }
             case 'paper':
                if (computerInput === 'paper'){
